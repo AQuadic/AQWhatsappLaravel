@@ -14,7 +14,7 @@ class AQWhatsapp
     /**
      * @var string
      */
-    protected string $baseUrl = 'https://whatsapp.aq-apps.xyz/api';
+    protected string $baseUrl = 'http://whatsapp.aq-apps.xyz/api';
 
     /**
      * @var string|null
