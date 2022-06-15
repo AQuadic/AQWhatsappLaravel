@@ -42,21 +42,27 @@ class WhatsappNotification
             switch ($message['type']) {
                 case 'image':
                     $this->client->sendImageMessage($phone, $message['image'], $message['message']);
+
                     break;
                 case 'buttons':
                     $this->client->sendButtonsMessage($phone, $message['buttons'], $message['message'], $message['title'], $message['footer']);
+
                     break;
                 case 'buttons-list':
                     $this->client->sendButtonsListMessage($phone, $message['buttons'], $message['message'], $message['button_text']);
+
                     break;
                 case 'text':
                 default:
                     $this->client->sendTextMessage($phone, $message['message']);
+
                     break;
             }
+
             return true;
         } catch (\Exception $e) {
             unset($e);
+
             return false;
         }
     }

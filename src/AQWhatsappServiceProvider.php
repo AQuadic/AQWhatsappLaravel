@@ -2,9 +2,9 @@
 
 namespace AQuadic\AQWhatsapp;
 
+use AQuadic\AQWhatsapp\Commands\AQWhatsappCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use AQuadic\AQWhatsapp\Commands\AQWhatsappCommand;
 
 class AQWhatsappServiceProvider extends PackageServiceProvider
 {
