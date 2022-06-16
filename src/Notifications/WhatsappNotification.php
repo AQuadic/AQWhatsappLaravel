@@ -27,7 +27,7 @@ class WhatsappNotification
         $message = $notification->toWhatsapp($notifiable);
 
         foreach ($message['phones'] as $phone) {
-            $this->sendMessage($phone, $message['message']);
+            $this->sendMessage($phone, $message);
         }
     }
 
@@ -36,7 +36,7 @@ class WhatsappNotification
      *
      * @returns bool
      */
-    public function sendMessage($phone, $message): bool
+    public function sendMessage($phone, array $message): bool
     {
         try {
             switch ($message['type']) {
